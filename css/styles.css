@@ -17,7 +17,7 @@ p {
   margin-bottom: 16px; }
 
 .app {
-  height: 100vh;
+  min-height: 100vh;
   position: relative; }
 
 @font-face {
@@ -40,6 +40,18 @@ p {
   font-family: GillItalic;
   src: url(../fonts/GillSans-Italic.ttf); }
 
+@font-face {
+  font-family: LatoBlack;
+  src: url(../fonts/Lato-Black.ttf); }
+
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato-Regular.ttf); }
+
+@font-face {
+  font-family: LatoItalic;
+  src: url(../fonts/Lato-Italic.ttf); }
+
 .link-nav {
   display: flex;
   position: fixed;
@@ -59,6 +71,7 @@ p {
     width: 160px;
     height: 50px;
     background-color: #ffd972;
+    box-shadow: 0px 5px 5px #444;
     border-radius: 50px; }
 
 nav {
@@ -234,7 +247,7 @@ nav {
   transform: none; }
 
 .home {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -267,8 +280,8 @@ nav {
       .home .circle-holder .small-circle p {
         text-align: center;
         width: 105px;
-        font-size: 12px;
-        font-family: GillItalic; }
+        font-size: 11px;
+        font-family: LatoItalic; }
     .home .circle-holder .big-circle {
       width: 360px;
       height: 360px;
@@ -286,32 +299,98 @@ nav {
       .home .circle-holder .big-circle p {
         width: 160px;
         font-size: 16px;
-        font-family: GillItalic; }
+        font-family: Lato; }
 
 @media only screen and (max-width: 768px) {
   .home .circle-holder .small-circle {
     margin-left: 240px;
     margin-top: -380px; } }
 
-footer {
-  top: 100px;
+.loginpage {
+  height: 100vh;
+  width: 100%;
+  background-color: #ffd972;
   display: flex;
-  position: relative;
-  font-family: GillItalic;
-  font-size: 16px; }
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .loginpage h1 {
+    font-family: LatoBlack;
+    font-size: 30px; }
+  .loginpage h4 {
+    font-family: LatoItalic;
+    font-size: 12px; }
+  .loginpage input {
+    border: none;
+    background: transparent;
+    border-bottom-width: 2px;
+    border-bottom: black;
+    margin-top: 50px; }
+  .loginpage .line {
+    background-color: #000;
+    height: 3px;
+    width: 100%; }
+  .loginpage section {
+    width: 740px;
+    min-height: 500px;
+    display: flex;
+    justify-content: space-between; }
+    .loginpage section .login-here {
+      margin-top: 160px;
+      width: 210px;
+      height: 420px; }
+    .loginpage section .sign-up-here {
+      margin-top: 60px;
+      width: 250px;
+      height: 500px; }
+    .loginpage section .login {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      margin-top: 50px;
+      padding-top: 8px;
+      width: 100%;
+      height: 50px;
+      background-color: #ffd972;
+      box-shadow: 0px 5px 5px #444;
+      border-radius: 50px;
+      font-family: CRegular;
+      font-size: 25px; }
+    .loginpage section a {
+      text-decoration: none; }
+
+@media only screen and (max-width: 768px) {
+  .loginpage {
+    height: 1200px; }
+    .loginpage section {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .loginpage section .login-here {
+        margin-top: 0; }
+      .loginpage section .sign-up-here {
+        margin-top: 0; } }
+
+footer {
+  bottom: 40px;
+  display: flex;
+  position: absolute;
+  font-family: LatoItalic;
+  font-size: 15px; }
+  footer .footer-info {
+    margin-left: 100px; }
   footer .footer-nav {
     display: flex;
     align-items: center;
-    margin: 0 100px; }
+    margin: 0 120px; }
   footer .footer-logo {
     margin: 10px 50px;
     display: flex; }
     footer .footer-logo .fab {
-      right: 50px;
       margin-left: 50px; }
   footer p {
     align-items: center;
-    margin: 16px 100px; }
+    margin: 16px 10px; }
   footer a {
     text-decoration: none;
     align-items: center;
@@ -319,8 +398,9 @@ footer {
 
 @media only screen and (max-width: 768px) {
   footer {
-    top: 16%;
     font-size: 10px; }
+    footer .footer-info {
+      margin-left: 20px; }
     footer .footer-nav {
       margin: 0 0px; }
     footer .footer-logo {

@@ -18,7 +18,7 @@ p {
 }
 
 .app {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -45,4 +45,19 @@ p {
 @font-face {
   font-family: GillItalic;
   src: url(../fonts/GillSans-Italic.ttf);
+}
+
+@font-face {
+  font-family: LatoBlack;
+  src: url(../fonts/Lato-Black.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: LatoItalic;
+  src: url(../fonts/Lato-Italic.ttf);
 }
